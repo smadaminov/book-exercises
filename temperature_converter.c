@@ -3,6 +3,12 @@ Converter from Fahrenheit to Celsius and backwards
 The program outputs table
 */
 
+#include<stdio.h>
+
+#define LOWER 0
+#define UPPER 300
+#define STEP 20
+
 main(){
     float fahr, celsius;
     int lower, upper, step;
@@ -31,7 +37,7 @@ main(){
 
     printf("Fahrenheit to Celsius table using FOR loop\n");
     printf("Fahrenheit:\tCelsius:\n");
-    for(fahr = 300; fahr >= 0; fahr -= 20){
+    for(fahr = UPPER; fahr >= LOWER; fahr -= STEP){
         printf("%3.0f\t\t%6.1f\n", fahr, (5.0 / 9.0) * (fahr - 32.0));
     }
 }
