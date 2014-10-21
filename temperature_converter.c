@@ -28,4 +28,10 @@ main(){
         printf("%3.0f\t\t%6.1f\n", celsius, fahr);
         celsius += step;
     }
+
+    printf("Fahrenheit to Celsius table using FOR loop\n");
+    printf("Fahrenheit:\tCelsius:\n");
+    for(fahr = 300; fahr >= 0; fahr -= 20){
+        printf("%3.0f\t\t%6.1f\n", fahr, (5.0 / 9.0) * (fahr - 32.0));
+    }
 }
