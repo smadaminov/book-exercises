@@ -103,7 +103,7 @@ void qsort(char *v[], int left, int right){
     swap(v, left, (left + right)/2);
     last = left;
     for (i = left + 1; i <= right; i++){
-        if (strcmp(v[i], v[left]) < 0)
+        if (strcmp(*v[i], *v[left]) < 0)
             swap(v, ++last, i);
     }
     swap(v, left, last);
